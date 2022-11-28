@@ -23,6 +23,7 @@ def get_move_symbol(direction):
 
 def print_legend():
 
+    print("__LEGEND__")
     legend = [["North:", '↑'],
               ["South:", '↓'],
               ["East:", '→'],
@@ -65,6 +66,7 @@ def run_rovers(grid_size, rover1_start, rover2_start, rover1_instruction_set, ro
     # print("Rover 2 Path: " + rover2_path.__str__())
 
     # Check for intersections and print cell coordinates
+    print("__INTERSECTIONS__")
     count_intersection = 0
     for rover1_position in rover1_path:
         for rover2_position in rover2_path:
@@ -73,6 +75,7 @@ def run_rovers(grid_size, rover1_start, rover2_start, rover1_instruction_set, ro
                 print("Intersection " + count_intersection.__str__() + ": " + rover1_position.__str__())
 
     # Visualize movement optional
+    print("__GRID__")
     draw_grid(grid_size, rover1_start, rover1_path, rover1_instruction_set,
               rover2_start, rover2_path, rover2_instruction_set)
 
