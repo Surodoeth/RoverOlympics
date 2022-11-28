@@ -53,13 +53,7 @@ def get_rover_path(start, instructions):
     return movements, path
 
 
-def run_rovers():
-    # Set initial conditions
-    grid_size = [5, 5]
-    rover1_start = [0, 2]
-    rover2_start = [4, 1]
-    rover1_instruction_set = "NEESSS"
-    rover2_instruction_set = "WWWNNNEEE"
+def run_rovers(grid_size, rover1_start, rover2_start, rover1_instruction_set, rover2_instruction_set):
 
     # Get rover paths as a list of coordinates movements optional
     rover1_movements, rover1_path = get_rover_path(rover1_start, rover1_instruction_set)
@@ -134,4 +128,13 @@ def draw_grid(grid_size, rover1_start, rover1_path, rover1_instruction_set,
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    run_rovers()
+
+    # Set initial conditions
+    input_grid_size = [5, 5]
+    input_rover1_start = [0, 2]
+    input_rover2_start = [4, 1]
+    input_rover1_instruction_set = "NEESSS"
+    input_rover2_instruction_set = "WWWNNNEEE"
+
+    run_rovers(input_grid_size, input_rover1_start, input_rover2_start, input_rover1_instruction_set,
+               input_rover2_instruction_set)
